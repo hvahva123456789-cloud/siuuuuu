@@ -63,6 +63,7 @@
             border: none;
             border-radius: 50px;
             cursor: pointer;
+            min-width: 140px;
             transition: transform 0.35s ease, box-shadow 0.35s ease, left 0.45s ease, top 0.45s ease;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
@@ -89,7 +90,8 @@
         }
 
         .swap-mode {
-            min-width: 420px;
+            width: 360px;
+            margin: 0 auto;
         }
 
         .swap-mode .btn {
@@ -173,11 +175,11 @@
             buttons.classList.add("swap-mode");
 
             if (swapped) {
-                btnNo.style.left = "240px";
-                btnYes.style.left = "40px";
+                btnNo.style.left = "calc(50% + 10px)";
+                btnYes.style.left = "calc(50% - 150px)";
             } else {
-                btnNo.style.left = "40px";
-                btnYes.style.left = "240px";
+                btnNo.style.left = "calc(50% - 150px)";
+                btnYes.style.left = "calc(50% + 10px)";
             }
 
             btnNo.style.top = "0";
@@ -227,3 +229,4 @@
     </script>
 </body>
 </html>
+
